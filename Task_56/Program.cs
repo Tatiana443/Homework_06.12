@@ -45,17 +45,6 @@ int[] SumElemsRow(int[,] matrix)
     return sumelems;
 }
 
-void PrintArray(int[] arr)
-{
-    Console.Write("[");
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
-        else Console.Write($"{arr[i]}");
-    }
-    Console.WriteLine("]");
-}
-
 (int, int) TheSmallestSummaRow(int[] array)
 {
     int resultSumma = array[0];
@@ -68,14 +57,14 @@ void PrintArray(int[] arr)
             resultRow = i;
         }
     }
-    return (resultSumma, resultRow);
+    return (resultRow, resultSumma);
 }
 
-int[,] matrix = NewRndMatrix(10, 10, 1, 9);
+int[,] matrix = NewRndMatrix(4, 4, 1, 9);
 PrintMatrix(matrix);
-Console.WriteLine();
 int[] sumElemsRow = SumElemsRow(matrix);
-PrintArray(sumElemsRow);
 Console.WriteLine();
 (int, int) theSmallestSummaRow = TheSmallestSummaRow(sumElemsRow);
-Console.WriteLine($"Минимальная сумма, строка ----> {theSmallestSummaRow}");
+Console.WriteLine($"Строка -> {theSmallestSummaRow}");
+
+
