@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\berezhnaya\\Desktop\\Study\\Homework_06.12\\Task_ 54\\Task_ 54.csproj": {}
+    "C:\\Users\\berezhnaya\\Desktop\\Study\\Homework_06.12\\Task_54\\Task_54.csproj": {}
   },
   "projects": {
-    "C:\\Users\\berezhnaya\\Desktop\\Study\\Homework_06.12\\Task_ 54\\Task_ 54.csproj": {
+    "C:\\Users\\berezhnaya\\Desktop\\Study\\Homework_06.12\\Task_54\\Task_54.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\berezhnaya\\Desktop\\Study\\Homework_06.12\\Task_ 54\\Task_ 54.csproj",
-        "projectName": "Task_ 54",
-        "projectPath": "C:\\Users\\berezhnaya\\Desktop\\Study\\Homework_06.12\\Task_ 54\\Task_ 54.csproj",
+        "projectUniqueName": "C:\\Users\\berezhnaya\\Desktop\\Study\\Homework_06.12\\Task_54\\Task_54.csproj",
+        "projectName": "Task_54",
+        "projectPath": "C:\\Users\\berezhnaya\\Desktop\\Study\\Homework_06.12\\Task_54\\Task_54.csproj",
         "packagesPath": "C:\\Users\\berezhnaya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\berezhnaya\\Desktop\\Study\\Homework_06.12\\Task_ 54\\obj\\",
+        "outputPath": "C:\\Users\\berezhnaya\\Desktop\\Study\\Homework_06.12\\Task_54\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\berezhnaya\\AppData\\Roaming\\NuGet\\NuGet.Config"

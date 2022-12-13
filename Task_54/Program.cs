@@ -26,6 +26,7 @@ void PrintMatrix(int[,] matrix, string beginRow, string separatorElems, string e
         Console.WriteLine(endRow);
     }
 }
+
 void SortElements(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -33,18 +34,18 @@ void SortElements(int[,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             for (int k = 0; k < matrix.GetLength(1) - 1; k++)
-
+            {
                 if (matrix[i, k] < matrix[i, k + 1])
                 {
                     int temp = matrix[i, k + 1];
                     matrix[i, k + 1] = matrix[i, k];
                     matrix[i, k] = temp;
                 }
-
+            }
         }
-
     }
 }
+
 int[,] array = CreateMatrixRndInt(4, 3, 1, 9);
 PrintMatrix(array, "", "", "");
 SortElements(array);
