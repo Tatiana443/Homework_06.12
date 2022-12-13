@@ -66,5 +66,3 @@ int[] sumElemsRow = SumElemsRow(matrix);
 Console.WriteLine();
 (int, int) theSmallestSummaRow = TheSmallestSummaRow(sumElemsRow);
 Console.WriteLine($"Строка -> {theSmallestSummaRow}");
-
-

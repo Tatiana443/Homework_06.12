@@ -1,4 +1,4 @@
-﻿int[,] NewRndMatrix(int rows, int columns, int min, int max)
+﻿int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
     int[,] matrix = new int[rows, columns];
     Random rnd = new Random();
@@ -12,70 +12,41 @@
     }
     return matrix;
 }
-
-void PrintMatrix(int[,] matrix)
-
+void PrintMatrix(int[,] matrix, string beginRow, string separatorElems, string endRow)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        Console.Write("[");
+        Console.Write(beginRow);
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             if (j < matrix.GetLength(1) - 1)
-                Console.Write($"{matrix[i, j],4}, ");
+                Console.Write($"{matrix[i, j],4}{separatorElems}");
             else Console.Write($"{matrix[i, j],4}");
         }
-        Console.WriteLine("]");
+        Console.WriteLine(endRow);
     }
 }
-
-int[] SumElemsRow(int[,] matrix)
+void SortElements(int[,] matrix)
 {
-    int[] sumelems = new int[matrix.GetLength(0)];
-    int sum = 0;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            sum += matrix[i, j];
-            sumelems[i] = sum;
+            for (int k = 0; k < matrix.GetLength(1) - 1; k++)
+
+                if (matrix[i, k] < matrix[i, k + 1])
+                {
+                    int temp = matrix[i, k + 1];
+                    matrix[i, k + 1] = matrix[i, k];
+                    matrix[i, k] = temp;
+                }
+
         }
-        sum = 0;
-    }
-    return sumelems;
-}
 
-void PrintArray(int[] arr)
-{
-    Console.Write("[");
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
-        else Console.Write($"{arr[i]}");
     }
-    Console.WriteLine("]");
 }
-
-(int, int) TheSmallestSummaRow(int[] array)
-{
-    int resultSumma = array[0];
-    int resultRow = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] < resultSumma)
-        {
-            resultSumma = array[i];
-            resultRow = i;
-        }
-    }
-    return (resultSumma, resultRow);
-}
-
-int[,] matrix = NewRndMatrix(10, 10, 1, 9);
-PrintMatrix(matrix);
+int[,] array = CreateMatrixRndInt(4, 3, 1, 9);
+PrintMatrix(array, "", "", "");
+SortElements(array);
 Console.WriteLine();
-int[] sumElemsRow = SumElemsRow(matrix);
-PrintArray(sumElemsRow);
-Console.WriteLine();
-(int, int) theSmallestSummaRow = TheSmallestSummaRow(sumElemsRow);
-Console.WriteLine($"Минимальная сумма, строка ----> {theSmallestSummaRow}");
+PrintMatrix(array, "", "", "");
